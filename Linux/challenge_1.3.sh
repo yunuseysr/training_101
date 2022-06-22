@@ -24,4 +24,6 @@ Script has delay condition for delete files.
 After 10 seconds created files are deleted.
 com
 sleep 10
+wait
+jobs
 rm -r ${1}
