@@ -18,3 +18,10 @@ touch ${1}.txt
 cat ${1}.txt
 echo "${1}" > ${1}.txt
 cd ..
+
+<<com
+Script has delay condition for delete files.
+After 10 seconds created files are deleted.
+com
+sleep 10
+rm -r ${1}
