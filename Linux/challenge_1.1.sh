@@ -2,6 +2,12 @@
 
 echo "The argument is ${1}." # The argument is yunus.
 
+# Script should take only first argument. 
+if [ $# -ne 1 ] ; then
+	printf 'ERROR! You must provide one and only one argument!\n' >&2
+	exit 1
+fi
+
 <<com
 Creates a folder which folder name is the argument.
 After that It  creates a new file (.txt) which same name with folder.
