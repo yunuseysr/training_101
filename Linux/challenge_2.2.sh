@@ -49,3 +49,20 @@ do
     cat "$entry"
 done
 tree
+
+echo "--------------------------------"
+echo "Python debuging file"
+echo "--------------------------------"
+
+for entry in "$search_dir"/*
+do
+  export VAR="$entry"
+  original="${VAR##*/}"
+  if [ "py" == ${original##*.} ] ; then
+    cd ..
+    echo "Python Output:"
+    python hello_world.py "${original%.*}" "${1}"
+    cd ch_folders
+  fi
+  done
+tree
