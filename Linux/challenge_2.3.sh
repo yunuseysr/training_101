@@ -2,7 +2,7 @@
 
 echo "There are $# arguments."
 echo "The arguments are : ${1} ${2} ${3} ${4}"
-search_dir=./welcome_101/Linux/ch_folders
+search_dir=./training_101/Linux/ch_folders
 cd ch_folders
 
 echo "--------------------------------"
