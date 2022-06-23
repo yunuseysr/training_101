@@ -5,11 +5,27 @@ echo "The arguments are : ${1} ${2} ${3} ${4}"
 search_dir=./welcome_101/Linux/ch_folders
 cd ch_folders
 
+echo "--------------------------------"
+echo "New files added"
+echo "--------------------------------"
 for i in "${@:2}"
 do
   touch "${i}"
 done
 
+echo "--------------------------------"
+echo "Files' contents"
+echo "--------------------------------"
+for entry in "$search_dir"/*
+do
+  echo "$entry"
+  cat "$entry"
+done
+tree
+
+echo "--------------------------------"
+echo "Files' upgrade with arguments"
+echo "--------------------------------"
 for entry in "$search_dir"/*
 do
   export VAR="$entry" # file name
@@ -24,3 +40,12 @@ do
     echo "${1}" >> "E-${1}.${original##*.}" # writes first argument into files 
   fi
 done
+
+echo "--------------------------------"
+echo "Files' contents"
+echo "--------------------------------"
+for entry in "$search_dir"/*
+do
+    cat "$entry"
+done
+tree
